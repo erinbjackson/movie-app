@@ -5,4 +5,5 @@ class ActorsController < ApplicationController
     render json:actor_id.as_json
     # render json:{message:"Sanity"}
   end
+  
 end
