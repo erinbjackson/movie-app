@@ -1,0 +1,10 @@
+GET http://[::1]:3000//all_actors
+
+
+###
+POST http://[::1]:3000/single_actor 
+Content-Type: application/json
+
+{
+  "name": "Benton"
+}
