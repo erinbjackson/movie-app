@@ -3,12 +3,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get "/single_actor/:id" => "actors#single_actor"
-  get "/all_movies/" => "movies#all_movies"
-  get "/single_movie/:id" => "movies#one_movie"
-  get "/all_actors" => "movies#all_actors"
-  get "/reverse" => "movies#reverse_order"
-  get "/actor/:name" => "movies#show"
-  get "/actor" => "movies#actor_show"
-  post "/single_actor" => "movies#single_actor"
+  get "/movies" => "movies#index"
+  post "/movies" => "movies#create"
+  get "/movies/:id" => "movies#show"
+  put "/movies/:id" => "movies#update"
+  delete "/movies/:id" => "movies#destroy"
+#Routes for Actors
+  get "/actors" => "actors#index"
+  post "/actors" => "actors#create"
+  get "/actors/:id" => "actors#show"
+  put "/actors/:id" => "actors#update"
+  delete "/actors/:id" => "actors#destroy"
 end

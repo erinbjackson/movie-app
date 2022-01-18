@@ -1,10 +1,50 @@
-GET http://[::1]:3000//all_actors
+### Gets all movies
+GET http://127.0.0.1:3000/movies
 
-
-###
-POST http://[::1]:3000/single_actor 
+### Adds a new movie
+POST http://127.0.0.1:3000/movies
 Content-Type: application/json
 
 {
-  "name": "Benton"
+  "title": "James Bond",
+  "year": "2022",
+  "plot": "James Bond has to save everyting again, smash everything in a car chase and either escape certain death or die."
 }
+### Update Movie data
+PUT http://127.0.0.1:3000/movies/8
+Content-Type: application/json
+
+{
+
+  "title": "My not really fake Movie",
+  "year": "2122",
+  "plot":  " more Something happens to some people somewhere."
+}
+
+### Remove movie from db
+DELETE http://127.0.0.1:3000/movies/7
+Content-Type: application/json
+
+####Actors Routes####
+###
+POST http://127.0.0.1:3000/actors
+Content-Type: application/json
+
+{
+  "first_name": "Robert",
+  "last_name": "Wilt",
+  "known_for": "Dumb Movie"
+}
+### Updates actors info
+PUT http://127.0.0.1:3000/actors/8
+Content-Type: application/json
+
+{
+  "first_name": "Robby",
+  "last_name": "Ybbor",
+  "known_for": "Weird Movie"
+}
+
+### Delete Actors
+DELETE http://127.0.0.1:3000/actors/10
+Content-Type: application/json 
