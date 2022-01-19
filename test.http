@@ -6,9 +6,11 @@ POST http://127.0.0.1:3000/movies
 Content-Type: application/json
 
 {
-  "title": "James Bond",
-  "year": "2022",
-  "plot": "James Bond has to save everyting again, smash everything in a car chase and either escape certain death or die."
+  "title": "Avitar",
+  "year": "2010",
+  "plot": "Some people do VR and go to a land where people are blue.",
+  "director": "James Cameron",
+  "runtime": 195
 }
 ### Update Movie data
 PUT http://127.0.0.1:3000/movies/8
@@ -16,9 +18,12 @@ Content-Type: application/json
 
 {
 
-  "title": "My not really fake Movie",
-  "year": "2122",
-  "plot":  " more Something happens to some people somewhere."
+  "title": "Titanic",
+  "year": "1998",
+  "plot":  " There is a boat. And an iceberg. And people drowning.",
+  "director": "James Cameron",
+  "runtime": 220
+  
 }
 
 ### Remove movie from db
@@ -26,23 +31,27 @@ DELETE http://127.0.0.1:3000/movies/7
 Content-Type: application/json
 
 ####Actors Routes####
-###
+### Adds an Actor
 POST http://127.0.0.1:3000/actors
 Content-Type: application/json
 
 {
-  "first_name": "Robert",
-  "last_name": "Wilt",
-  "known_for": "Dumb Movie"
+  "first_name": "Fred",
+  "last_name": "Durts",
+  "known_for": "Weird Movie",
+  "age": "27",
+  "gender": "male"
 }
 ### Updates actors info
-PUT http://127.0.0.1:3000/actors/8
+PUT http://127.0.0.1:3000/actors/25
 Content-Type: application/json
 
 {
-  "first_name": "Robby",
-  "last_name": "Ybbor",
-  "known_for": "Weird Movie"
+  "first_name": "Fred",
+  "last_name": "Derf",
+  "known_for": "HAppy Movie",
+  "age": "50",
+  "gender": "female"
 }
 
 ### Delete Actors
