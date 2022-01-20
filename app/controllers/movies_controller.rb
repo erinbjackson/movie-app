@@ -12,8 +12,12 @@ class MoviesController < ApplicationController
       director: params[:director],
       runtime: params[:runtime]
     )
-    movie.save
-    render json: movie.as_json
+    if movie.save
+      render json: movie
+    else
+      render json: {errors: movie.errors.full_messages}, status: :unprocessable_entity
+
+    end
   end
   def show
     movie = Movie.find(params[:id])
@@ -26,9 +30,13 @@ class MoviesController < ApplicationController
     movie.plot = params[:plot] || movie.plot
     movie.director = params[:director] || movie.director
     movie.runtime = params[:runtime] || movie.runtime
-    movie.save 
-    render json: movie.as_json
+    if movie.save
+      render json: movie
+    else
+      render json: {errors: movie.errors.full_messages}, status: :unprocessable_entity
+    end
   end
+
   def destroy
     movie = Movie.find(params[:id]
     )

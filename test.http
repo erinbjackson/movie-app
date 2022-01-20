@@ -6,11 +6,11 @@ POST http://127.0.0.1:3000/movies
 Content-Type: application/json
 
 {
-  "title": "Avitar",
-  "year": "2010",
+  "title": "The waltons",
+  "year": "1",
   "plot": "Some people do VR and go to a land where people are blue.",
   "director": "James Cameron",
-  "runtime": 195
+  "runtime": "123"
 }
 ### Update Movie data
 PUT http://127.0.0.1:3000/movies/8
@@ -36,10 +36,10 @@ POST http://127.0.0.1:3000/actors
 Content-Type: application/json
 
 {
-  "first_name": "Fred",
+  
   "last_name": "Durts",
   "known_for": "Weird Movie",
-  "age": "27",
+  "age": "15",
   "gender": "male"
 }
 ### Updates actors info
@@ -47,10 +47,10 @@ PUT http://127.0.0.1:3000/actors/25
 Content-Type: application/json
 
 {
-  "first_name": "Fred",
-  "last_name": "Derf",
+  
+  "last_name": "welp",
   "known_for": "HAppy Movie",
-  "age": "50",
+  "age": "14",
   "gender": "female"
 }
 
