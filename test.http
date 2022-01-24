@@ -31,6 +31,10 @@ DELETE http://127.0.0.1:3000/movies/7
 Content-Type: application/json
 
 ####Actors Routes####
+### Gets all actors 
+GET http://127.0.0.1:3000/actors
+
+
 ### Adds an Actor
 POST http://127.0.0.1:3000/actors
 Content-Type: application/json
