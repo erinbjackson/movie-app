@@ -27,13 +27,15 @@ Content-Type: application/json
 }
 
 ### Remove movie from db
-DELETE http://127.0.0.1:3000/movies/7
+DELETE http://127.0.0.1:3000/movies/12
 Content-Type: application/json
 
 ####Actors Routes####
 ### Gets all actors 
 GET http://127.0.0.1:3000/actors
 
+###
+GET http://127.0.0.1:3000/actors/12
 
 ### Adds an Actor
 POST http://127.0.0.1:3000/actors
