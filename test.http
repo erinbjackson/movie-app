@@ -1,27 +1,31 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDM0MTg5NDl9.owvuOVyA8bOBXFKMT24S8g55tLKFMCUl1
+
 ### Gets all movies
 GET http://127.0.0.1:3000/movies
 
 ### Adds a new movie
 POST http://127.0.0.1:3000/movies
 Content-Type: application/json
+Authorization: Bearer {{ jwt }}
 
 {
-  "title": "The waltons",
-  "year": "1",
-  "plot": "Some people do VR and go to a land where people are blue.",
-  "director": "James Cameron",
+  "title": "Toana",
+  "year": "2019",
+  "plot": "Some cartoon things happen",
+  "director": "unsure",
   "runtime": "123"
 }
 ### Update Movie data
 PUT http://127.0.0.1:3000/movies/8
 Content-Type: application/json
+Authorization: Bearer {{ jwt }}
 
 {
 
   "title": "Titanic",
-  "year": "1998",
+  "year": "1990",
   "plot":  " There is a boat. And an iceberg. And people drowning.",
-  "director": "James Cameron",
+  "director": "James 'I use Papyrus'  Cameron",
   "runtime": 220
   
 }
@@ -29,6 +33,7 @@ Content-Type: application/json
 ### Remove movie from db
 DELETE http://127.0.0.1:3000/movies/12
 Content-Type: application/json
+Authorization: Bearer {{ jwt }}
 
 ####Actors Routes####
 ### Gets all actors 
@@ -40,17 +45,21 @@ GET http://127.0.0.1:3000/actors/12
 ### Adds an Actor
 POST http://127.0.0.1:3000/actors
 Content-Type: application/json
+Authorization: Bearer {{ jwt }}
 
 {
-  
-  "last_name": "Durts",
-  "known_for": "Weird Movie",
-  "age": "15",
-  "gender": "male"
+  "first_name": "Jason",
+  "last_name": "Mamoa",
+  "known_for": "Moana",
+  "age": 50,
+  "gender": "male",
+   "movie_id": 14
 }
 ### Updates actors info
 PUT http://127.0.0.1:3000/actors/25
 Content-Type: application/json
+Authorization: Bearer {{ jwt }}
+
 
 {
   
@@ -63,3 +72,27 @@ Content-Type: application/json
 ### Delete Actors
 DELETE http://127.0.0.1:3000/actors/10
 Content-Type: application/json 
+Authorization: Bearer {{ jwt }}
+
+### Users Routes
+
+### Users create (signup)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "charlie",
+  "email": "charlie@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+
+{
+  "email": "Aiden@test.com",
+  "password": "password"
+}
