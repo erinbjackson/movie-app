@@ -16,17 +16,17 @@ Authorization: Bearer {{ jwt }}
   "runtime": "123"
 }
 ### Update Movie data
-PUT http://127.0.0.1:3000/movies/8
+PUT http://127.0.0.1:3000/movies/5
 Content-Type: application/json
 Authorization: Bearer {{ jwt }}
 
 {
 
-  "title": "Titanic",
-  "year": "1990",
-  "plot":  " There is a boat. And an iceberg. And people drowning.",
+  "title": " Basdlihlhdsby",
+  "year": "1994",
+  "plot":  " Maybe jack and rose do it.",
   "director": "James 'I use Papyrus'  Cameron",
-  "runtime": 220
+  "runtime": 320
   
 }
 
@@ -93,7 +93,7 @@ Content-Type: application/json
 
 
 {
-  "email": "Aiden@test.com",
+  "email": "einstein@gmail.com",
   "password": "password"
 }
 
